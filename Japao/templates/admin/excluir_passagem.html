@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css.css') }}">
+    <title>Excluir passagem</title>
+</head>
+<body>
+    {% extends 'admin/base.html' %}
+
+{% block content %}
+    <style>
+        .excluir {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        h1, p, form{
+            margin-bottom: 20px;
+        }
+
+        a{
+            text-decoration: none;
+            color: #000000;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        button{
+          margin-right: 150px;
+          margin-top: 20px;
+          width: 200px;
+          height: 50px;
+          background-color: #000000;
+          color: #ffffff;
+          font-size: 15px;
+          border-radius: 10px;
+          border: none;
+          float: right;
+        }
+    </style>
+    <div class="excluir">
+        <h1>Excluir passagem</h1>
+        <p>Tem certeza de que deseja excluir a passagem "{{ passagem['nome'] }}"?</p>
+        
+        <form method="POST">
+            <button type="submit">Confirmar Exclusão</button>
+        </form>
+
+        <!-- Botão de retorno para outra página -->
+        <a href="{{ url_for('listar_passagem', id=passagem[id]) }}">Cancelar</a>
+    </div>
+{% endblock %}
+</body>
+</html>

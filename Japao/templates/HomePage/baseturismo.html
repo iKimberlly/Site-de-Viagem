@@ -1,0 +1,35 @@
+<body>
+{% extends 'turismo.html' %}
+{% block content %}
+    <section id="pacotes" class="pacotes" style="width: 80%; margin: 0 auto;">
+        <h1 class="pacotes-title">Conheça nossos pacotes</h1>
+        <div class="pacotes-grid">
+            {% for passagem in passagem %}
+            <div class="content">
+                <div class="pacotes-cards">
+                    <div class="card">
+                        <div class="card-tag card-tag-top">
+                            <p>Promoção</p>
+                        </div>
+                        <div class="card-tag card-tag-bottom">
+                            <p>{{ passagem['preco'] }}</p>
+                        </div>
+                        <img src="data:image/jpeg;base64,{{ passagem['img'] }}" alt="Imagem da passagem">
+                        <div class="card-content">
+                            <h2>{{ passagem['descricao'] }}</h2>
+                            <ul>
+                                <li><i data-feather="coffee"></i>Café da manhã incluso</li>
+                                <li><i data-feather="wifi"></i>Wi-Fi</li>
+                                <li><i data-feather="map"></i>Passeio</li>
+                                <button class="comprar" id="finalizar">Comprar</button>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}
+</body>
+</html>

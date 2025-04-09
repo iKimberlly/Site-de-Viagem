@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  height: 600px;
+  background: url('../img/bannerjapao.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header nav {
+  width: 100%;
+  height: 100px;
+  background-color: red;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+header nav p {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  transition: text-shadow .6s;
+}
+
+header nav p:hover {
+  text-shadow: 0px 0px 10px #fff;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  margin: 25px 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+header nav ul li:hover {
+  color: #f56c11;
+  transition: .4s;
+}
+
+.header-content {
+  color: #fff;
+  font-weight: bold;
+  max-width: 400px;
+  margin: 200px auto;
+  text-align: center;
+  animation: ease text-move 2s forwards;
+}
+
+.header-content h1 {
+  margin-bottom: 10px;
+  font-size: 4rem;
+}
+
+@keyframes text-move {
+  from {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  border: 0;
+  cursor: pointer;
+  background-color: rgb(248, 124, 7);
+  color: #fff;
+}
+
+.comprar {
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  border: 0;
+  cursor: pointer;
+  background-color: rgb(248, 124, 7);
+  color: #fff;
+  margin-left: 200px;
+  margin-top: -70px;
+}
+
+/* PACOTES */
+
+.pacotes {
+  background-color: rgb(255, 255, 255);
+  padding: 25px;
+}
+
+.pacotes .pacotes-title {
+  width: 100%;
+  margin: auto;
+  padding: 15px;
+  text-align: center;
+}
+
+.pacotes .pacotes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.pacotes .pacotes-cards {
+  margin: auto;
+  max-width: 1250px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pacotes .card {
+  margin: 25px;
+  width: 350px;
+  height: 350px;
+  background: #fff;
+  border-radius: 24px 0px;
+  box-shadow: 0px 0px 4px -1px #222;
+  position: relative;
+  transition: all 1s;
+}
+
+.pacotes .card:hover {
+  transform: scale(1.1);
+}
+
+.pacotes .card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 24px 0 0 0;
+}
+
+
+.pacotes .card-content {
+  padding: 0 15px;
+}
+
+.pacotes .card-content h2 {
+  font-size: 14px;
+}
+
+.pacotes .card-content ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+}
+
+.pacotes .card-content ul li {
+  font-size: 8px;
+  display: flex;
+  align-items: center;
+  margin: 3px 0px;
+  color: gray;
+  font-weight: bold;
+}
+
+.pacotes .card-content li svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.pacotes .card .card-tag-top {
+  position: absolute;
+  background: #f56c11;
+  right: 0;
+  top: 15px;
+  border-radius: 8px 0 0 8px;
+  padding: 5px 10px;
+  box-shadow: 1px 2px 5px -2px #222;
+}
+
+.pacotes .card .card-tag-bottom {
+  position: absolute;
+  left: 0;
+  top: 160px;
+  background: #1d61dd;
+  border-radius: 0 8px 8px 0;
+  padding: 5px 10px;
+  box-shadow: 1px 1px 4px 1px #222;
+}
+
+.pacotes .card .card-tag p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffff;
+}
+
+/* SERVIÇOS */
+
+.servicos {
+  padding: 15px;
+}
+
+.servicos .servicos-title {
+  text-align: center;
+  margin: 25px;
+}
+
+.servicos .servicos-cards {
+  display: flex;
+  padding: 35px 0;
+  max-width: 950px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.servicos .card {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.servicos .card svg {
+  width: 60px;
+  height: 60px;
+  margin: 50px 0;
+  transition: all 1s;
+}
+
+.servicos .card svg:hover {
+  color: #f56c11;
+  transform: scale(1.1);
+}
+
+.servicos .card h3 {
+  font-weight: bold;
+}
+
+.servicos .card p {
+  color: gray;
+  font-size: .8rem;
+  text-align: center;
+}
+
+.servicos .card .card-content {
+  height: 100px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Set the size of the div element that contains the map */
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+.contato {
+  background-color: #e1e8f7;
+  position: relative;
+}
+
+.contato .contato-card {
+  width: 350px;
+  height: 300px;
+  padding: 0 30px;
+  background: #fff;
+  position: absolute;
+  z-index: 99;
+  border-radius: 8px;
+  top: calc(50% - 150px);
+  left: calc(20% - 170px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+}
+
+.contato .contato-card h1 {
+  padding-right: 58px;
+}
+
+.contato .contato-card li {
+  font-size: .8rem;
+  font-weight: bold;
+  color: gray;
+  display: flex;
+  align-items: center;
+}
+
+.contato .contato-card li svg {
+  width: 16px;
+  margin: 10px;
+}
+
+/* RESPONSIVIDADE */
+
+/* Especial para Mapa */
+@media (max-width: 902px) {
+  .contato {
+    padding: 60px;
+  }
+
+  .contato .contato-card {
+    left: 40px;
+  }
+}
+
+@media (max-width: 850px) {
+  .contato {
+    padding: 40px 0;
+  }
+
+  .contato .contato-card {
+    position: static;
+    margin: 40px auto;
+  }
+}
+
+/* Para Tablet */
+@media (max-width: 767px) {
+}
+
+/* Para mobile */
+@media (max-width: 480px) {
+  body {
+    margin-bottom: 55px;
+  }
+
+  header nav ul {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 100;
+    background: #073da1;
+    color: #fff;
+    font-weight: bold;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header nav p {
+    width: 100%;
+    text-align: center;
+  }
+}

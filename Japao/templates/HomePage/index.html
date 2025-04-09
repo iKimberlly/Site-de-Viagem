@@ -1,0 +1,127 @@
+﻿<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Japão</title> 	
+	<link href="../../static/HomePage/css/estilo.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+	
+	<header id="header">
+		<h1>Japão</h1>
+		<nav>
+			<a href="{{url_for('home')}}">Home</a>
+			<span class="linhavert"></span>
+			<a href="#">Culinária</a>
+			<span class="linhavert"></span>
+			<a href="#">História</a>
+			<span class="linhavert"></span>
+			<a href="#">Esportes</a>
+			<span class="linhavert"></span>
+			<a href="{{url_for('turismo')}}">Turismo</a>
+		</nav>
+	</header>
+	<div id="suporte-header"></div>
+	
+	<section id="banner-header">
+		<figure><img id="img-banner" /></figure>
+		<table style="margin:auto; width:980px;"><tr><td>
+				<section id="destaques-header">	
+					<div id="destaque1"><h2>CULINÁRIA</h2>
+						<img src="../../static/HomePage/imagens/culinaria-1.jpg" alt="Culinária"/>
+					</div>
+					
+					<div id="destaque1" class="ajustes-destaque">
+						<h2>ESPORTES</h2>
+						<img src="../../static/HomePage/imagens/esportes-1.jpg" alt="Esportes"/>
+					</div>
+					
+					<div id="destaque1" class="ajustes-destaque">
+						<h2>TURISMO</h2>
+						<img src="../../static/HomePage/imagens/foto-tur-1.jpg" alt="Turismo"/></div>
+					
+				</section></td></tr></table></section>
+	<!-- ########################### TURISMO -->
+	
+	<section id="turismo">	
+		<h1 id="titulo-tur">Turismo</h1><div class="linha-pontilhada"></div>
+	</section>
+
+	
+	
+	<section id="fotos-turismo">
+		<table style="margin:auto; width:1230px;"><tr><td>
+				<section id="destaques-turismo">	
+					<div id="destaque2"><img src="../../static/HomePage/imagens/turismo-gal-1.jpg" alt="Turismo 1"/>
+						<a href="#" class="link-tur">ver mais</a></div>
+					
+					<div id="destaque2" class="ajustes-destaque2"><img src="../../static/HomePage/imagens/turismo-gal-2.jpg" alt="Turismo 2"/>
+						<a href="#" class="link-tur">ver mais</a>
+					</div>
+					
+					<div id="destaque2">
+						<img src="../../static/HomePage/imagens/turismo-gal-3.jpg" alt="Turismo 3"/>
+						<a href="#" class="link-tur">ver mais</a>
+					</div>
+					
+				</section>
+			</td></tr>
+		</table>
+	</section>
+	
+	<!-- DOWNLOADS -->
+	
+	<section id="downloads">
+		<div id="area-downloads">
+			<article id="download-1">
+				<h3>SUGESTÃO DE ROTEIRO</h3>
+				<p>Faça o download de algumas sugestões de roteiros em PDF.</p>
+			</article>
+
+			<article id="download-2">
+				<img src="../../static/HomePage/imagens/bt-download.png" alt="Download" />
+			</article>
+		</div>
+	</section>
+	
+	
+	<!-- ########################### CULINÁRIA -->
+	<section id="culinaria">
+		<h1 id="titulo-culinaria">Culinária</h1>	
+		<div class="linha-pontilhada"></div>
+	</section>
+	
+	<section id="galeria-culinaria">
+		<figure>
+			<img class="ajusta-culinaria" src="../../static/HomePage/imagens/galeria-culinaria-1.jpg" alt="Culinaria 1" />
+			<img class="ajusta-culinaria" src="../../static/HomePage/imagens/galeria-culinaria-2.jpg" alt="Culinaria 2" />						
+		</figure>
+		<div id="voltar">
+			<a href="#"><img src="../../static/HomePage/imagens/voltar.png" alt="voltar" /></a>
+		</div>
+		<div id="avancar">
+			<a href="#"><img src="../../static/HomePage/imagens/avancar.png" alt="avancar" /></a>	
+		</div>
+	</section>
+
+	<!-- ########################### ESPORTES -->
+	<section id="esportes">
+		<h1 id="titulo-esportes">Esportes</h1>	
+		<div class="linha-pontilhada"></div>
+	</section>
+	
+	<section id="galeria-esportes">
+		<figure>
+			<img class="ajusta-esportes1" src="../../static/HomePage/imagens/galeria-esportes-1.png" alt="Esporte 1" />
+			<img class="ajusta-esportes2" src="../../static/HomePage/imagens/galeria-esportes-2.png" alt="Esporte 2" />			
+			<img class="ajusta-esportes3" src="../../static/HomePage/imagens/galeria-esportes-3.png" alt="Esporte 3" />			
+		</figure>
+		
+	</section>
+	
+	
+	
+</body>
+</html>

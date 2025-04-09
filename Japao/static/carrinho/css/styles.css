@@ -1,0 +1,245 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header nav {
+  width: 100%;
+  height: 100px;
+  background-color: red;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+header nav p {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  transition: text-shadow .6s ;
+}
+header nav p:hover {
+  text-shadow: 0px 0px 10px #fff;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  font-size: 18px;
+  margin: 25px 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+header nav ul li:hover {
+  color: #f56c11;
+  transition: .4s;
+}
+
+.title{
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.content {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.page-title {
+  font-size: 40px;
+  padding: 50px 0;
+  text-align: center;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table thead tr {
+  border-bottom: 3px solid #eee;
+}
+
+table thead tr th {
+  text-align: left;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  color: #666;
+}
+
+table tbody tr td {
+  padding: 30px 0;
+}
+
+.product {
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #fafafa;
+  text-align: center;
+  width: 200px; 
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.name {
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-left: -80px;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.product img {
+  width: 200px;
+  height: 120px;
+  border-radius: 6px;
+}
+
+.qty {
+  background: #eee;
+  display: inline-flex;
+  padding: 0 0;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 60px;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 30px;
+}
+
+.qty span {
+  margin: 0 10px;
+}
+
+.qty button {
+  display: flex;
+  align-items: center;
+  background-color: #ff0000;
+  border: 0;
+  padding: 0 10px;
+  font-size: 20px;
+  height: 100%;
+}
+
+.qty button:hover {
+  background: #ddd;
+}
+
+.remove {
+  background: #504b4b;
+  border: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.remove:hover {
+  background: #ff0000;
+}
+
+.box {
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  background: #eee;
+  color: #222;
+  margin: 30px;
+}
+.box header {
+  padding: 15px 20px;
+  font-size: 18px;
+  border-bottom: 1px solid #ccc;
+}
+
+.box .info {
+  padding: 20px;
+  font-size: 16px;
+}
+
+.box .info div {
+  display: flex;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+
+.box .info button {
+  color: #28a745;
+  background: transparent;
+  border: 0;
+  display: flex;
+  font-size: 16px;
+}
+
+.box footer {
+  padding: 15px 20px;
+  background: #ddd;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box button {
+  border: 0;
+  padding: 15px 0;
+  color: white;
+  background: #28a745;
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+#finalizar {
+  display: block;
+  width: 300px;
+  height: 50px;
+  padding: 10px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 10px 10px 10px;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 450px;
+  margin-bottom: 20px;
+}
+
+#finalizar:hover {
+  background: #ff01018e
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Passagem</title>
+</head>
+<body>
+{% extends 'admin/base.html' %}
+{% block content %}
+    <style>
+        label {
+            display: flex;
+            align-items: center;
+            margin-left: 300px;
+        }
+        input[type="text"], input[type="number"], input[type="file"] {
+            width: 400px;
+            padding: 8px;
+            margin-bottom: 10px;
+            margin-left: 50px;
+        }
+        h1 {
+            text-align: center;
+            margin-top: -50px;
+            margin-left: 350px;
+        }
+        button {
+            margin: 5px auto;
+            width: 200px;
+            height: 50px;
+            background-color: #000000;
+            color: #ffffff;
+            font-size: 20px;
+            border-radius: 10px;
+            border: none;
+        }
+    </style>
+    <h1>Cadastrar Passagem</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <label for="nome_passagem">Nome da Passagem:</label>
+        <input type="text" id="text" name="nome_passagem">
+        
+        <label for="descricao">Descrição:</label>
+        <input type="text" id="descricao" name="descricao">
+        
+        <label for="preco">Preço:</label>
+        <input type="text" id="preco" name="preco">
+        
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" id="quantidade" name="quantidade">
+        
+        <label for="imagem">Imagem:</label>
+        <input type="file" id="imagem" name="imagem">
+        
+        <button type="submit">Cadastrar</button>
+    </form>
+{% endblock %}
+</body>
+</html>

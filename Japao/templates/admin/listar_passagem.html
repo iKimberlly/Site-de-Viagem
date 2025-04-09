@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Passagem</title>
+    <style>
+    </style>
+</head>
+<body>
+{% extends 'admin/base.html' %}
+{% block content %}
+    <div class="container">
+        <h2>Listagem de Passagem</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                    <th>Imagem</th>
+                    <th>Editar</th>
+                    <th>Excluir</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for passagem in passagem %}
+                <tr>
+                    <td>{{ passagem['id'] }}</td>
+                    <td>{{ passagem['nome'] }}</td>
+                    <td>{{ passagem['descricao'] }}</td>
+                    <td>{{ passagem['preco'] }}</td>
+                    <td>{{ passagem['quantidade'] }}</td>
+                    <td><img src="data:image/jpeg;base64,{{ passagem['img'] }}" alt="Imagem da passagem"></td>
+                    <td><a class="edite" href="{{ url_for('editar_passagem', id=passagem['id']) }}">Editar</a></td>
+                    <td><a class="edite" href="{{ url_for('excluir_passagem', id=passagem['id']) }}">Excluir</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+</body>
+</html>

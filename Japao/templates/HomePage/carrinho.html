@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="../../static/carrinho/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="title">Wiki Espress Viajens</div>
+          <ul>
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="{{url_for('usuario_logout')}}">SAIR</a></li>
+          </ul>
+        </nav>
+      <div class="page-title">Seu Carrinho</div>
+      <div class="content">
+        <section>
+          <table>
+            <thead>
+              <tr>
+                <th>Produto</th>
+                <th>Pacote</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th>Total</th>
+                <th>-</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="product">
+                    <img src="../../static/carrinho/img/sapporo.jpg" alt="sapporo" />
+                  </div>
+                  <span class="name">Sapporo</span>
+                </td>
+                <td>Pacote 14 para conhecer o maior festival de Sapporo</td>
+                <td>R$ 800</td>
+                <td>
+                  <div class="qty">
+                    <button class="qty-minus"><i class="bx bx-minus"></i></button>
+                    <span class="qty-value">2</span>
+                    <button class="qty-plus"><i class="bx bx-plus"></i></button>
+                  </div>
+                </td>
+                <td class="total">R$ 1600</td>
+                <td>
+                  <button class="remove"><i class="bx bx-x"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <div class="box">
+          <header>Resumo da compra</header>
+          <div class="info">
+            <div><span>Sub-total</span><span class="subtotal">R$ 1600</span></div>
+            <div><span>Frete</span><span>Gratuito</span></div>
+            <div>
+              <button>Adicionar cupom de desconto
+                <i class="bx bx-right-arrow-alt"></i>
+              </button>
+            </div>
+          </div>
+          <footer>
+            <span>Total</span>
+            <span class="grand-total">R$ 1600</span>
+          </footer>
+        </div>
+        <button id="finalizar">Finalizar Compra</button>
+      </div>
+    </header>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const finalizarButton = document.getElementById('finalizar');
+        finalizarButton.addEventListener('click', function() {
+          alert('Compra finalizada com sucesso!');
+        });
+
+        // Lógica para atualizar a quantidade e os preços
+        const qtyMinusButtons = document.querySelectorAll('.qty-minus');
+        const qtyPlusButtons = document.querySelectorAll('.qty-plus');
+        const removeButtons = document.querySelectorAll('.remove');
+
+        qtyMinusButtons.forEach(button => {
+          button.addEventListener('click', updateQuantity);
+        });
+
+        qtyPlusButtons.forEach(button => {
+          button.addEventListener('click', updateQuantity);
+        });
+
+        removeButtons.forEach(button => {
+          button.addEventListener('click', removeItem);
+        });
+
+        function updateQuantity(event) {
+          const isAdding = event.target.classList.contains('qty-plus');
+          const qtyContainer = event.target.closest('.qty');
+          const qtyValue = qtyContainer.querySelector('.qty-value');
+          let quantity = parseInt(qtyValue.textContent);
+
+          if (isAdding) {
+            quantity++;
+          } else {
+            if (quantity > 1) quantity--;
+          }
+
+          qtyValue.textContent = quantity;
+
+          updateTotal(qtyContainer.closest('tr'), quantity);
+        }
+
+        function updateTotal(row, quantity) {
+          const price = parseFloat(row.querySelector('td:nth-child(3)').textContent.replace('R$ ', ''));
+          const totalCell = row.querySelector('.total');
+          const newTotal = price * quantity;
+
+          totalCell.textContent = `R$ ${newTotal.toFixed(2)}`;
+          updateSummary();
+        }
+
+        function updateSummary() {
+          let subtotal = 0;
+          document.querySelectorAll('.total').forEach(cell => {
+            subtotal += parseFloat(cell.textContent.replace('R$ ', ''));
+          });
+
+          document.querySelector('.subtotal').textContent = `R$ ${subtotal.toFixed(2)}`;
+          document.querySelector('.grand-total').textContent = `R$ ${subtotal.toFixed(2)}`;
+        }
+
+        function removeItem(event) {
+          const row = event.target.closest('tr');
+          row.remove();
+          updateSummary();
+        }
+      });
+    </script>
+</body>
+</html>

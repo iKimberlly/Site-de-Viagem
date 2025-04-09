@@ -1,0 +1,310 @@
+﻿*{
+	margin:0;
+	padding:0; 
+	text-decoration:none; 
+	list-style:none;
+}
+
+header{
+	width:100%; 
+	height:70px; 
+	background:#940603; 
+	position:fixed; 
+	z-index:2;
+}
+	
+h1{
+	font:normal 38px verdana; 
+	color:#FFFF00; 
+	float:left; 
+	margin:0 40px; 
+	line-height:70px;
+}
+	nav{
+	width:500px; 
+	height:70px; 
+	float:right;
+}
+	
+nav a{
+	font:normal 18px verdana; 
+	color:#FFF; 
+	margin:0 10px; 
+	float:left; 
+	line-height:70px;
+}
+	nav a:hover{
+		background:#FFCC66; 
+		color:#000;
+	}
+	
+#suporte-header{
+	width:100%; 
+	height:70px; 
+}
+	
+.linhavert{
+	border-right:1px dashed #FFF; 
+	height:50px; 
+	float:left; 
+	display:block; 
+	margin:8px 0;
+}
+	
+	/* banner */
+	#banner-header{
+		width:100%; 
+		height:600px; 
+		position:relative;
+		background: url(../imagens/banner.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	
+		figure{ 
+			width:100%; 
+			height:600px;
+		}
+		
+		#img-banner{
+			width:100%; 
+			height:600px;  
+			background-size:cover; 
+			background-position:center;
+		}
+	
+		/* barras com position */
+		#destaques-header{
+			width:970px; 
+			height:151px; 
+			position:absolute; 
+			bottom:-80px;
+		}
+			
+		#destaque1{
+			width:310px; 
+			height:150px; 
+			float:left;
+		}
+			
+		h2{
+			width:310px; 
+			height:27px; 
+			background:#F3573C; 
+			position:absolute; 
+			top:0; 
+			font:normal 16px verdana; 
+			text-align:center; 
+			line-height:27px;
+		}
+			
+		.ajustes-destaque{
+			margin:0 10px;
+		}
+			
+		#turismo{
+			width:100%; 
+			height:180px; 
+			background:#FFF; 
+			overflow:hidden;
+		}
+			
+		#titulo-tur{
+			width:100%; 
+			font:bold 50px verdana; 
+			text-align:center; 
+			color:#111; 
+			margin-top:90px; 
+			text-align:center;
+		}
+		
+	.linha-pontilhada{
+		clear:both; 
+		width:80%; 
+		height:5px; 
+		margin:auto; 
+		border-bottom:1px dotted red;
+	}
+		
+	/* fotos turismo */
+	#fotos-turismo{
+		width:100%; 
+		height:330px; 
+		position:relative; 
+	}
+		
+	#area-turismo{
+		width:440px; 
+		height:320px; 
+		float:left;  
+		position:relative; 
+	}
+
+	#destaques-turismo{
+		width:1230px; 
+		height:300px; 
+	}
+			
+	#destaque2{
+		width:410px; 
+		height:auto; 
+		float:left; 
+		position:relative; 
+	}
+		
+	.ajustes-destaque2{
+		margin:0 0; 
+	}
+			
+	.link-tur{
+		width:100px; 
+		height:20px; 
+		display:block; 
+		background:#550710; 
+		position:absolute; 
+		bottom:5px; color:#FFF; 
+		font:normal 12px arial; 
+		text-align:center; 
+		line-height:20px; 
+	}
+		
+	.link-tur:hover{
+		background:#330033
+	}
+		
+	/* downloads */	
+	#downloads{
+		width:100%; 
+		height:110px; 
+		background:#FC561A; 
+		margin-top:30px; 
+	}
+		
+	#area-downloads{
+		width:1230px; 
+		margin:auto; 
+		position:relative; 
+	}
+			
+	#download-1{
+		width:550px; 
+		height:60px; 
+		float:left; 
+	}
+				
+	#download-1 h3{
+		font:normal 26px verdana; 
+		color:#FFF; 
+		margin-top:5px; 
+	}
+				
+	#download-1 p{
+		font:normal 16px verdana; 
+		color:#FFF; 
+		margin-top:5px; 
+	}
+
+			
+	#download-2{
+		width:140px; 
+		height:95px; 
+		float:right; 
+		position:absolute; 
+		right:0; 
+		top:-10px; 
+	}
+
+	/* culinaria */
+	#culinaria{
+		width:100%; 
+		height:120px; 
+		overflow:hidden; 
+	}
+		
+	#titulo-culinaria{
+		width:100%; 
+		font:bold 50px verdana; 
+		text-align:center; 
+		color:#111; 
+		margin-top:30px; 
+		text-align:center; 
+	}
+	
+	#galeria-culinaria{
+		width:1230px; 
+		height:330px; 
+		margin:auto; 
+		position:relative; 
+	}
+		
+	#galeria-culinaria figure{
+		margin:0; 
+		height:0;
+	}	
+		 
+			
+	.ajusta-culinaria{
+		float:left;
+	}
+			
+	#voltar{
+		position:absolute; 
+		top:150px; 
+		left:15px; 
+	}
+			
+	#avancar{
+		position:absolute; 
+		top:150px; 
+		right:15px; 
+	}
+						
+	/* esportes */
+	#esportes{
+		width:100%; 
+		height:120px; 
+		overflow:hidden; 
+	}
+		
+	#titulo-esportes{
+		width:100%; 
+		font:bold 50px verdana; 
+		text-align:center; 
+		color:#111; 
+		margin-top:30px; 
+		padding-bottom:10px; 
+		text-align:center; 
+	}
+
+	#galeria-esportes{
+		width:100%; 
+		height:330px; 
+		margin:auto; 
+		position:relative; 
+	}
+		
+	#galeria-esportes figure{
+		margin:0; 
+		height:0;
+	}	
+			
+	.ajusta-esportes1{
+		position:absolute; 
+		left:0; 
+		z-index:2;
+	}
+			
+	.ajusta-esportes2{
+		position:absolute; 
+		left:300px; 
+		z-index:1; 
+	}
+			
+	.ajusta-esportes3{
+		position:absolute; 
+		right:20px;  
+		z-index:2;
+	}
+			
+		

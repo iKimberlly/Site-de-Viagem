@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Lateral</title>
+  <link rel="stylesheet" href="../../static/admin/css/css.css">
+</head>
+
+<body>
+  <nav>
+    <div class="title">Wiki Espress Viajens</div>
+  </nav>
+  <div class="top">
+    <div class="logo">
+      <img src="../../static/admin/img/logoviagem.png" alt="Logo">
+    </div>
+  </div>
+  <div class="menu">
+    <h2>Menu</h2>
+    <ul>
+        <li><a href="#">Cadastro de passagem</a>
+            <ul>
+                <li><a href="{{url_for('cadastrar_passagem')}}">Cadastrar</a></li>
+                <li><a href="{{url_for('listar')}}">Listar</a></li>
+                <li><a href="{{url_for('editar_passagem', id=1)}}">Editar</a></li>
+                <li><a href="{{url_for('excluir_passagem', id=1)}}">Excluir</a></li>
+            </ul>
+          </li>
+        <li><a href="{{url_for('admin')}}">Home</a>
+    </ul>
+</div>
+
+  {% block content %}
+
+  {% endblock %}
+</body>
+
+</html>

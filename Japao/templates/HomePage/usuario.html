@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/usuario/css/css.css">
+    <title>Passagens Compradas</title>
+</head>
+<body>
+    {% extends 'HomePage/carrinho.html' %}
+    <div class="container">
+        <div class="bemvindo">
+            <h1>Suas Passagens</h1>
+        </div>
+        <ul class="passagem-list">
+            {% for passagem in passagem%}
+            <li class="passagem-item">
+                <div class="passagem-info">
+                    <div>
+                        <strong>Nome:</strong> {{ passagem.nome }}<br>
+                        <strong>Descrição:</strong> {{ passagem.descricao }}
+                        <strong>Preço:</strong> {{ passagem.preco }}<br>
+                        <strong>Quantidade:</strong> {{ passagem.quantidade }}<br>
+                    </div>
+                    <div>
+                        <strong>Passagem ID:</strong> {{ passagem.pass_id }}
+                    </div>
+                    <div>
+                        {% if passagem.img %}
+                        <img src="data:image/jpeg;base64,{{ passagem.img }}" alt="Imagem da Passagem">
+                        {% else %}
+                        <img src="{{ url_for('static', filename='default.jpg') }}" alt="Imagem da Passagem">
+                        {% endif %}
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

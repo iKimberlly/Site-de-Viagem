@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tela de login</title>
+  <link rel="stylesheet" href="../../static/login/css/style.css">
+</head>
+<body>
+
+<div class="container animacao">
+  <div class="content-login">
+      <h2 class="active"> Login </h2>
+      <form class="box-login" method="post" action="{{url_for('validate_login')}}">
+        <input type="email" id="email" class="campo" name="email" placeholder="E-mail">
+        <input type="text" id="password" class="campo" name="senha" placeholder="Senha">
+        <input type="submit" class="botao" value="Entrar">
+      </form>
+
+      <div class="box-lembrar-senha">  
+        <a class="link" href="#">Lembrar Senha ?</a>
+        <a class="link" href="{{url_for('cadastro')}}">Ainda Não é cadastrado ?</a>
+      </div>
+
+  </div>
+</div>
+
+</body>
+</html>
